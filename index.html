@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Ankit Thakur | Virtual Assistant & Business Support</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #f5f3ec;
+  color: #17231d;
+  font-family: 'DM Sans', sans-serif;
+  line-height: 1.6;
+}
+
+.wrap {
+  width: min(1160px, calc(100% - 44px));
+  margin: auto;
+}
+
+/* HEADER */
+header {
+  height: 85px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #e4eae5;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: #183d2e;
+  text-decoration: none;
+}
+
+.brand-sub {
+  font-family: 'DM Sans', sans-serif;
+  border-left: 1px solid #aeb9b0;
+  padding-left: 17px;
+  font-size: 11px;
+  line-height: 1.5;
+  letter-spacing: 1.2px;
+}
+
+/* HERO */
+.hero {
+  padding: 76px 0 78px;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap: 58px;
+  align-items: center;
+}
+
+.eyebrow {
+  display: inline-flex;
+  background: #e8f4c4;
+  border-radius: 30px;
+  padding: 11px 18px;
+  color: #263d2d;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(48px, 5.5vw, 78px);
+  font-weight: 500;
+  letter-spacing: -3.3px;
+  line-height: 1.02;
+  color: #1d211e;
+  margin: 24px 0;
+}
+
+.hero h1::after {
+  content: "";
+  display: block;
+  width: 55%;
+  height: 7px;
+  background: #c8f23e;
+  border-radius: 100%;
+  transform: rotate(-1deg);
+  margin: 9px 0 0 16px;
+}
+
+.hero p {
+  font-size: 19px;
+  line-height: 1.65;
+  color: #505750;
+  max-width: 690px;
+}
+
+/* SERVICES */
+.hero-services {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 31px 0 25px;
+}
+
+.hero-services span {
+  padding: 0 10px;
+  border-right: 1px solid #d8ddd4;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.hero-services span:first-child {
+  padding-left: 0;
+}
+
+.hero-services span:last-child {
+  border: 0;
+}
+
+.hero-services b {
+  display: block;
+  font-size: 23px;
+  color: #245b45;
+}
+
+/* BOOKING BUTTON */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #173e30;
+  color: #fff;
+  border: 1px solid #173e30;
+  border-radius: 4px;
+  padding: 19px 28px;
+  font-size: 23px;
+  font-weight: 400;
+  letter-spacing: .2px;
+  text-decoration: none;
+  transition: all .25s ease;
+}
+
+.btn:hover {
+  background: #c8f23e;
+  color: #173e30;
+  border-color: #c8f23e;
+  transform: translateY(-3px);
+}
+
+/* PORTRAIT */
+.hero-photo-wrap {
+  position: relative;
+  padding: 0 13px 13px 0;
+  max-width: 490px;
+  justify-self: end;
+  width: 100%;
+}
+
+.hero-photo-wrap::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  right: 0;
+  bottom: 0;
+  width: 87%;
+  height: 88%;
+  background: #c8f23e;
+}
+
+.hero-photo {
+  position: relative;
+  z-index: 1;
+  height: 520px;
+  border: 2px solid #26372d;
+  background: #e9d8c4;
+  overflow: hidden;
+}
+
+.hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+  display: block;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 800px) {
+  .hero {
+    padding: 54px 0;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .hero-photo-wrap {
+    justify-self: center;
+    max-width: 460px;
+  }
+
+  .hero-photo {
+    height: 490px;
+  }
+
+  .hero h1 {
+    font-size: clamp(46px, 10vw, 68px);
+  }
+
+  .hero-services {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 13px;
+  }
+}
+
+@media (max-width: 520px) {
+  .wrap {
+    width: calc(100% - 32px);
+  }
+
+  .hero-photo {
+    height: 390px;
+  }
+
+  .hero-services span {
+    font-size: 11px;
+    padding: 0 7px;
+  }
+
+  .hero .btn {
+    width: 100%;
+    font-size: 20px;
+  }
+
+  .brand {
+    font-size: 21px;
+  }
+
+  .brand-sub {
+    display: none;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="brand" href="#home">
+      Ankit Thakur
+      <span class="brand-sub">
+        VIRTUAL ASSISTANT &amp;<br>
+        BUSINESS SUPPORT
+      </span>
+    </a>
+  </div>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+
+  <div class="wrap hero-grid">
+
+    <div class="hero-copy">
+
+      <div class="eyebrow">
+        VIRTUAL ASSISTANT &amp; BUSINESS SUPPORT
+      </div>
+
+      <h1>I help business owners get more done.</h1>
+
+      <p>
+        Reliable, proactive and detail-oriented virtual assistance
+        for business owners, CEOs and managers — from daily
+        operations and marketing to administration and business support.
+      </p>
+
+      <div class="hero-services">
+
+        <span>
+          <b>▱</b>
+          Admin &amp; Operations
+        </span>
+
+        <span>
+          <b>◖</b>
+          Marketing &amp; Social Media
+        </span>
+
+        <span>
+          <b>▰</b>
+          Business Support
+        </span>
+
+        <span>
+          <b>ϟ</b>
+          AI &amp; Process Automation
+        </span>
+
+      </div>
+
+      <a class="btn"
+         href="https://cal.com/ankit-thakur-3gwplm"
+         target="_blank"
+         rel="noopener noreferrer">
+        Book Your Discovery Call →
+      </a>
+
+    </div>
+
+    <div class="hero-photo-wrap">
+
+      <div class="hero-photo">
+        <img
+          src="./ankit-photo.png"
+          alt="Ankit Thakur - Virtual Assistant and Business Support">
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+</body>
+</html>
