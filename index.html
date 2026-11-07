@@ -679,6 +679,63 @@ header {
   background: #a9d927;
 }
 
+
+/* HOW I WORK */
+.how-i-work-section {
+  background: #f5f3ec;
+  padding: 100px 7%;
+  color: #173e30;
+}
+.how-i-work-container {
+  max-width: 1200px;
+  margin: auto;
+}
+.how-work-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-top: 48px;
+}
+.how-work-card {
+  background: #fff;
+  border: 1px solid rgba(23, 62, 48, 0.10);
+  border-radius: 16px;
+  padding: 30px 26px;
+  min-height: 245px;
+  transition: transform .22s ease, background .22s ease, box-shadow .22s ease;
+}
+.how-work-card:hover {
+  background: #e8f4c4;
+  transform: translateY(-6px);
+  box-shadow: 0 12px 26px rgba(23, 62, 48, .08);
+}
+.how-work-number {
+  color: #668b38;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+}
+.how-work-card h3 {
+  color: #173e30;
+  font-size: 21px;
+  margin: 0 0 12px;
+}
+.how-work-card p {
+  color: #68776e;
+  font-size: 14px;
+  line-height: 1.8;
+  margin: 0;
+}
+@media (max-width: 900px) {
+  .how-work-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .how-i-work-section { padding: 70px 6%; }
+  .how-work-grid { grid-template-columns: 1fr; }
+  .how-work-card { min-height: auto; padding: 25px; }
+}
+
 </style>
 </head>
 
@@ -928,6 +985,44 @@ header {
   </div>
 </section>
 
+
+
+<!-- HOW I WORK -->
+<section class="how-i-work-section">
+  <div class="how-i-work-container">
+    <div class="section-eyebrow">HOW I WORK</div>
+    <h2 class="section-heading">Clear communication. Reliable execution. Real support.</h2>
+    <p class="section-description">
+      A straightforward process keeps us aligned, makes priorities clear and helps work move forward without unnecessary back and forth.
+    </p>
+
+    <div class="how-work-grid">
+      <div class="how-work-card">
+        <div class="how-work-number">01 / UNDERSTAND</div>
+        <h3>Start with a Conversation</h3>
+        <p>We discuss your business, current workload, goals and the tasks where you need dependable support.</p>
+      </div>
+
+      <div class="how-work-card">
+        <div class="how-work-number">02 / ORGANIZE</div>
+        <h3>Set Priorities</h3>
+        <p>We agree on responsibilities, deadlines, communication preferences and the tools or systems your team uses.</p>
+      </div>
+
+      <div class="how-work-card">
+        <div class="how-work-number">03 / EXECUTE</div>
+        <h3>Get Things Done</h3>
+        <p>I take care of the assigned tasks, manage details carefully and keep work moving according to the agreed priorities.</p>
+      </div>
+
+      <div class="how-work-card">
+        <div class="how-work-number">04 / IMPROVE</div>
+        <h3>Stay Updated</h3>
+        <p>You receive clear progress updates, completed work and ongoing communication so we can adjust and improve as needed.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- TESTIMONIALS -->
 <section class="testimonials-section" id="testimonials">
