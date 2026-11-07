@@ -13,6 +13,185 @@
 
 <style>
 
+
+/* BENEFITS & FEATURES */
+.benefits-section {
+  background: #f5f3ec;
+  padding: 100px 7%;
+  color: #173e30;
+}
+
+.benefits-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.section-eyebrow {
+  color: #68776e;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.section-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(36px, 5vw, 55px);
+  line-height: 1.15;
+  max-width: 650px;
+  margin: 0 0 18px;
+  color: #173e30;
+}
+
+.section-description {
+  color: #68776e;
+  font-size: 16px;
+  line-height: 1.8;
+  max-width: 600px;
+  margin-bottom: 50px;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.benefit-card {
+  background: #fff;
+  padding: 32px;
+  border-radius: 16px;
+  border: 1px solid rgba(23, 62, 48, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.benefit-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 35px rgba(23, 62, 48, 0.08);
+}
+
+.benefit-number {
+  color: #68776e;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.benefit-card h3 {
+  color: #173e30;
+  font-size: 21px;
+  margin-bottom: 12px;
+}
+
+.benefit-card p {
+  color: #68776e;
+  font-size: 14px;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* TESTIMONIALS */
+.testimonials-section {
+  background: #173e30;
+  padding: 100px 7%;
+  color: #fff;
+}
+
+.testimonials-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.testimonials-section .section-eyebrow {
+  color: #c8f23e;
+}
+
+.testimonials-section .section-heading {
+  color: #fff;
+}
+
+.testimonials-section .section-description {
+  color: rgba(255,255,255,0.7);
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.testimonial-card {
+  background: #f5f3ec;
+  color: #173e30;
+  padding: 30px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 245px;
+}
+
+.testimonial-quote {
+  font-family: 'Playfair Display', serif;
+  font-size: 19px;
+  line-height: 1.6;
+  margin: 0 0 30px;
+}
+
+.testimonial-person {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  border-top: 1px solid rgba(23, 62, 48, 0.12);
+  padding-top: 20px;
+}
+
+.testimonial-person img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.testimonial-person h4 {
+  font-size: 14px;
+  margin: 0 0 4px;
+  color: #173e30;
+}
+
+.testimonial-person span {
+  font-size: 12px;
+  color: #68776e;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .benefits-grid,
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .benefits-section,
+  .testimonials-section {
+    padding: 70px 6%;
+  }
+
+  .benefits-grid,
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .benefit-card,
+  .testimonial-card {
+    padding: 25px;
+  }
+}
+
+
+
   
 /* BRANDS I'VE WORKED WITH - MOVING STRIP */
 .brand-strip {
@@ -672,3 +851,170 @@ header {
 
 </body>
 </html>
+
+
+
+<!-- BENEFITS & FEATURES -->
+<section class="benefits-section">
+  <div class="benefits-container">
+
+    <div class="section-eyebrow">THE VALUE I BRING</div>
+
+    <h2 class="section-heading">
+      More than support. A smarter way to run your business.
+    </h2>
+
+    <p class="section-description">
+      Get reliable business support that saves time, reduces daily workload
+      and gives you more room to focus on what matters most.
+    </p>
+
+    <div class="benefits-grid">
+
+      <div class="benefit-card">
+        <div class="benefit-number">01 / SAVE TIME</div>
+        <h3>Focus on Growing</h3>
+        <p>Delegate repetitive tasks and get more time for important decisions, clients and business growth.</p>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-number">02 / STAY ORGANIZED</div>
+        <h3>Better Operations</h3>
+        <p>Keep daily tasks, schedules, records and business operations organized and on track.</p>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-number">03 / WORK SMARTER</div>
+        <h3>Reliable Support</h3>
+        <p>Get consistent assistance with administrative work, marketing and everyday business tasks.</p>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-number">04 / REDUCE COSTS</div>
+        <h3>Flexible Assistance</h3>
+        <p>Get the support you need without the additional overhead of hiring a full-time employee.</p>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-number">05 / STAY CONNECTED</div>
+        <h3>Team Collaboration</h3>
+        <p>Work with someone who communicates clearly, follows instructions and keeps you updated.</p>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-number">06 / MOVE FORWARD</div>
+        <h3>More Productivity</h3>
+        <p>Build a smoother workflow so you can spend less time managing tasks and more time moving forward.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- TESTIMONIALS -->
+<section class="testimonials-section">
+  <div class="testimonials-container">
+
+    <div class="section-eyebrow">CLIENT EXPERIENCES</div>
+
+    <h2 class="section-heading">
+      Good work builds great relationships.
+    </h2>
+
+    <p class="section-description">
+      Here's what clients have to say about working together.
+    </p>
+
+    <div class="testimonials-grid">
+
+      <div class="testimonial-card">
+        <p class="testimonial-quote">
+          "An excellent support experience. Tasks were handled professionally
+          and communication was always clear."
+        </p>
+        <div class="testimonial-person">
+          <img src="./client-1.png" alt="Client photo">
+          <div>
+            <h4>Client Name</h4>
+            <span>Business Owner</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <p class="testimonial-quote">
+          "Having reliable help with daily operations gave me more time
+          to focus on running my business."
+        </p>
+        <div class="testimonial-person">
+          <img src="./client-2.png" alt="Client photo">
+          <div>
+            <h4>Client Name</h4>
+            <span>Founder</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <p class="testimonial-quote">
+          "Very organized, responsive and proactive. The entire workflow
+          became easier to manage."
+        </p>
+        <div class="testimonial-person">
+          <img src="./client-3.png" alt="Client photo">
+          <div>
+            <h4>Client Name</h4>
+            <span>Entrepreneur</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <p class="testimonial-quote">
+          "Social media tasks were managed with care and consistency.
+          Communication throughout was smooth."
+        </p>
+        <div class="testimonial-person">
+          <img src="./client-4.png" alt="Client photo">
+          <div>
+            <h4>Client Name</h4>
+            <span>Marketing Client</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <p class="testimonial-quote">
+          "A dependable professional who understands priorities
+          and takes responsibility for assigned work."
+        </p>
+        <div class="testimonial-person">
+          <img src="./client-5.png" alt="Client photo">
+          <div>
+            <h4>Client Name</h4>
+            <span>Small Business Owner</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <p class="testimonial-quote">
+          "Great support with business tasks. It made managing
+          everyday responsibilities much more manageable."
+        </p>
+        <div class="testimonial-person">
+          <img src="./client-6.png" alt="Client photo">
+          <div>
+            <h4>Client Name</h4>
+            <span>Business Manager</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
