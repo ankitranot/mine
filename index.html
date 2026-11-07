@@ -59,16 +59,47 @@
 }
 
 .benefit-card {
-  background: #fff;
+  position: relative;
+  isolation: isolate;
+  background: #c8f23e; /* Parrot-green foreground */
   padding: 32px;
   border-radius: 16px;
   border: 1px solid rgba(23, 62, 48, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.14s ease-out, box-shadow 0.14s ease-out;
+  z-index: 0;
+}
+
+/* Three crisp offset layers behind the foreground card */
+.benefit-card::before,
+.benefit-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  z-index: -1;
+  pointer-events: none;
+  transition: transform 0.14s ease-out;
+}
+
+.benefit-card::before {
+  background: #fff;
+}
+
+.benefit-card::after {
+  background: #e8f4c4;
 }
 
 .benefit-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 14px 35px rgba(23, 62, 48, 0.08);
+  transform: translate(12px, 12px);
+  box-shadow: 0 12px 24px rgba(23, 62, 48, 0.12);
+}
+
+.benefit-card:hover::before {
+  transform: translate(-7px, -7px);
+}
+
+.benefit-card:hover::after {
+  transform: translate(-14px, -14px);
 }
 
 .benefit-number {
@@ -662,6 +693,25 @@ header {
     font-size: 12px;
   }
 }
+
+/* First value card: white foreground with parrot-green layers behind */
+.benefit-card-white {
+  background: #e8f4c4;
+  transition: background 0.22s ease-out, transform 0.14s ease-out, box-shadow 0.14s ease-out;
+}
+
+.benefit-card-white:hover {
+  background: #fff;
+}
+
+.benefit-card-white::before {
+  background: #c8f23e;
+}
+
+.benefit-card-white::after {
+  background: #a9d927;
+}
+
 </style>
 </head>
 
@@ -871,7 +921,7 @@ header {
 
     <div class="benefits-grid">
 
-      <div class="benefit-card">
+      <div class="benefit-card benefit-card-white">
         <div class="benefit-number">01 / SAVE TIME</div>
         <h3>Focus on Growing</h3>
         <p>Delegate repetitive tasks and get more time for important decisions, clients and business growth.</p>
@@ -1015,6 +1065,5 @@ header {
     </div>
   </div>
 </section>
-
 
 
