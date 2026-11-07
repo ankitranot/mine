@@ -12,6 +12,80 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
 
 <style>
+
+  
+/* BRANDS I'VE WORKED WITH - MOVING STRIP */
+.brand-strip {
+  width: 100%;
+  overflow: hidden;
+  padding: 30px 0 38px;
+  background: #f5f3ec;
+  border-top: 1px solid #e5e8df;
+  border-bottom: 1px solid #e5e8df;
+}
+
+.brand-strip-label {
+  text-align: center;
+  color: #68776e;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  margin-bottom: 25px;
+}
+
+.brand-marquee {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+
+.brand-track {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 65px;
+  padding-right: 65px;
+  animation: brand-scroll 25s linear infinite;
+}
+
+.brand-name {
+  color: #173e30;
+  font-size: 25px;
+  font-weight: 900;
+  white-space: nowrap;
+  opacity: 0.85;
+}
+
+.brand-separator {
+  color: #91a17d;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.brand-marquee:hover .brand-track {
+  animation-play-state: paused;
+}
+
+@keyframes brand-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - 65px));
+  }
+}
+
+@media (max-width: 600px) {
+  .brand-track {
+    gap: 35px;
+    padding-right: 35px;
+  }
+
+  .brand-name {
+    font-size: 20px;
+  }
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
