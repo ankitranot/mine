@@ -737,8 +737,71 @@ header {
 }
 
 </style>
-</head>
 
+<style>
+/* PROBLEMS I SOLVE */
+.at-problems, .at-services, .at-pricing, .at-faq, .at-final-cta {
+  padding: 100px 7%;
+  color: #173e30;
+}
+.at-problems { background: #f5f3ec; }
+.at-services { background: #fff; }
+.at-section-wrap { max-width: 1200px; margin: 0 auto; }
+.at-problem-grid, .at-service-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 48px;
+}
+.at-problem-card, .at-service-card {
+  padding: 30px; border: 1px solid rgba(23,62,48,.12); border-radius: 16px;
+  background: transparent; transition: transform .22s ease, background .22s ease, box-shadow .22s ease;
+}
+.at-problem-card:hover, .at-service-card:hover {
+  transform: translateY(-5px); background: #e8f4c4; box-shadow: 0 12px 26px rgba(23,62,48,.07);
+}
+.at-card-index { color: #668b38; font-size: 12px; font-weight: 800; letter-spacing: 1.5px; margin-bottom: 25px; }
+.at-problem-card h3, .at-service-card h3 { font-size: 20px; color: #173e30; margin: 0 0 11px; }
+.at-problem-card p, .at-service-card p { font-size: 14px; line-height: 1.8; color: #68776e; margin: 0; }
+.at-service-card { background: #fdfdfb; }
+.at-service-card .at-card-index { font-size: 24px; margin-bottom: 20px; }
+.at-pricing { background: #f5f3ec; }
+.at-price-grid { display:grid; grid-template-columns: repeat(3,1fr); gap:18px; margin-top:48px; align-items:stretch; }
+.at-price-card { background:#fff; border:1px solid rgba(23,62,48,.12); border-radius:18px; padding:32px; display:flex; flex-direction:column; }
+.at-price-card.featured { background:#173e30; color:#fff; border-color:#173e30; }
+.at-price-card h3 { font-size:20px; margin:0 0 10px; }
+.at-price-card p { color:#68776e; font-size:14px; line-height:1.7; }
+.at-price-card.featured p { color:rgba(255,255,255,.72); }
+.at-price { font-family:'Playfair Display',serif; font-size:42px; margin:20px 0 5px; }
+.at-price small { font-family:'DM Sans',sans-serif; font-size:14px; }
+.at-price-list { list-style:none; padding:0; margin:22px 0 28px; }
+.at-price-list li { padding:9px 0; border-bottom:1px solid rgba(23,62,48,.1); font-size:14px; }
+.at-price-card.featured .at-price-list li { border-color:rgba(255,255,255,.16); }
+.at-price-card .at-plan-link { margin-top:auto; display:inline-block; text-align:center; text-decoration:none; padding:13px 18px; border-radius:5px; background:#173e30; color:#fff; font-weight:700; }
+.at-price-card.featured .at-plan-link { background:#c8f23e; color:#173e30; }
+.at-pricing-note { margin-top:20px; color:#68776e; font-size:13px; }
+.at-faq { background:#fff; }
+.at-faq-list { max-width:900px; margin:45px auto 0; border-top:1px solid #dfe5dc; }
+.at-faq-list details { border-bottom:1px solid #dfe5dc; padding:22px 4px; }
+.at-faq-list summary { cursor:pointer; list-style:none; font-weight:700; color:#173e30; display:flex; justify-content:space-between; gap:20px; }
+.at-faq-list summary::-webkit-details-marker { display:none; }
+.at-faq-list summary::after { content:"+"; color:#668b38; font-size:22px; line-height:1; }
+.at-faq-list details[open] summary::after { content:"−"; }
+.at-faq-list details p { margin:15px 35px 0 0; color:#68776e; line-height:1.8; font-size:14px; }
+.at-final-cta { background:#173e30; color:#fff; text-align:center; }
+.at-final-cta .section-eyebrow { color:#c8f23e; }
+.at-final-cta .section-heading { color:#fff; margin-left:auto; margin-right:auto; }
+.at-final-cta .section-description { color:rgba(255,255,255,.72); margin-left:auto; margin-right:auto; }
+.at-final-cta .btn { background:#c8f23e; color:#173e30; border-color:#c8f23e; font-size:17px; padding:16px 28px; }
+.at-final-cta .btn:hover { background:#fff; border-color:#fff; }
+@media(max-width:900px) {
+  .at-problem-grid,.at-service-grid,.at-price-grid { grid-template-columns:repeat(2,1fr); }
+}
+@media(max-width:600px) {
+  .at-problems,.at-services,.at-pricing,.at-faq,.at-final-cta { padding:70px 6%; }
+  .at-problem-grid,.at-service-grid,.at-price-grid { grid-template-columns:1fr; }
+  .at-problem-card,.at-service-card,.at-price-card { padding:25px; }
+}
+</style>
+
+</head>
 <body>
 
 <header>
@@ -920,73 +983,37 @@ header {
 
   </div>
 </section>
-
-</main>
-
-</body>
-</html>
-
-
-
-<!-- BENEFITS & FEATURES -->
-<section class="benefits-section">
-  <div class="benefits-container">
-
-    <div class="section-eyebrow">THE VALUE I BRING</div>
-
-    <h2 class="section-heading">
-      More than support. A smarter way to run your business.
-    </h2>
-
-    <p class="section-description">
-      Get reliable business support that saves time, reduces daily workload
-      and gives you more room to focus on what matters most.
-    </p>
-
-    <div class="benefits-grid">
-
-      <div class="benefit-card">
-        <div class="benefit-number">01 / SAVE TIME</div>
-        <h3>Focus on Growing</h3>
-        <p>Delegate repetitive tasks and get more time for important decisions, clients and business growth.</p>
-      </div>
-
-      <div class="benefit-card">
-        <div class="benefit-number">02 / STAY ORGANIZED</div>
-        <h3>Better Operations</h3>
-        <p>Keep daily tasks, schedules, records and business operations organized and on track.</p>
-      </div>
-
-      <div class="benefit-card">
-        <div class="benefit-number">03 / WORK SMARTER</div>
-        <h3>Reliable Support</h3>
-        <p>Get consistent assistance with administrative work, marketing and everyday business tasks.</p>
-      </div>
-
-      <div class="benefit-card">
-        <div class="benefit-number">04 / REDUCE COSTS</div>
-        <h3>Flexible Assistance</h3>
-        <p>Get the support you need without the additional overhead of hiring a full-time employee.</p>
-      </div>
-
-      <div class="benefit-card">
-        <div class="benefit-number">05 / STAY CONNECTED</div>
-        <h3>Team Collaboration</h3>
-        <p>Work with someone who communicates clearly, follows instructions and keeps you updated.</p>
-      </div>
-
-      <div class="benefit-card">
-        <div class="benefit-number">06 / MOVE FORWARD</div>
-        <h3>More Productivity</h3>
-        <p>Build a smoother workflow so you can spend less time managing tasks and more time moving forward.</p>
-      </div>
-
+<section class="at-problems">
+  <div class="at-section-wrap">
+    <div class="section-eyebrow">THE PROBLEMS I SOLVE</div>
+    <h2 class="section-heading">Your time should go into growing the business — not chasing tasks.</h2>
+    <p class="section-description">I help reduce the everyday workload that slows business owners down, so important work gets the attention it deserves.</p>
+    <div class="at-problem-grid">
+      <article class="at-problem-card"><div class="at-card-index">01 / TOO MUCH TO DO</div><h3>An Overloaded Schedule</h3><p>Daily admin, follow-ups and repetitive tasks leave less time for strategy, customers and growth.</p></article>
+      <article class="at-problem-card"><div class="at-card-index">02 / DISORGANIZED WORK</div><h3>Tasks Falling Through</h3><p>Scattered information, missed deadlines and unclear priorities make operations harder to manage.</p></article>
+      <article class="at-problem-card"><div class="at-card-index">03 / INCONSISTENT MARKETING</div><h3>No Time to Stay Visible</h3><p>Content planning, social media and campaign coordination can become difficult to maintain consistently.</p></article>
+      <article class="at-problem-card"><div class="at-card-index">04 / OPERATIONAL PRESSURE</div><h3>Too Many Small Details</h3><p>Orders, records, inboxes and routine business tasks compete for your attention every day.</p></article>
+      <article class="at-problem-card"><div class="at-card-index">05 / LIMITED CAPACITY</div><h3>Not Ready to Hire Full-Time</h3><p>You need dependable help, but may not need the cost and commitment of another full-time employee.</p></article>
+      <article class="at-problem-card"><div class="at-card-index">06 / NO ROOM TO GROW</div><h3>Stuck in the Day-to-Day</h3><p>When you handle everything yourself, it becomes harder to focus on clients, decisions and new opportunities.</p></article>
     </div>
   </div>
 </section>
 
-
-
+<section class="at-services">
+  <div class="at-section-wrap">
+    <div class="section-eyebrow">SERVICES</div>
+    <h2 class="section-heading">What I handle for your business.</h2>
+    <p class="section-description">Practical, flexible support across the daily tasks and workflows that keep your business moving.</p>
+    <div class="at-service-grid">
+      <article class="at-service-card"><div class="at-card-index">01</div><h3>Administrative Support</h3><p>Email and calendar management, data entry, documentation, research, scheduling and follow-ups.</p></article>
+      <article class="at-service-card"><div class="at-card-index">02</div><h3>Social Media Management</h3><p>Content scheduling, captions, publishing, community support and coordination of your social media workflow.</p></article>
+      <article class="at-service-card"><div class="at-card-index">03</div><h3>Paid Advertising Support</h3><p>Campaign coordination, ad account assistance, reporting, creative organization and routine performance checks.</p></article>
+      <article class="at-service-card"><div class="at-card-index">04</div><h3>Business Operations</h3><p>Task tracking, process coordination, spreadsheets, records and everyday operational assistance.</p></article>
+      <article class="at-service-card"><div class="at-card-index">05</div><h3>E-commerce Management</h3><p>Product and inventory updates, order coordination, listing support and store administration.</p></article>
+      <article class="at-service-card"><div class="at-card-index">06</div><h3>Executive Assistance</h3><p>Priority management, meeting coordination, research and reliable support for busy founders and business owners.</p></article>
+    </div>
+  </div>
+</section>
 <!-- HOW I WORK -->
 <section class="how-i-work-section">
   <div class="how-i-work-container">
@@ -1127,4 +1154,61 @@ header {
     </div>
   </div>
 </section>
+<section class="at-pricing" id="pricing">
+  <div class="at-section-wrap">
+    <div class="section-eyebrow">PRICING &amp; ENGAGEMENT PLANS</div>
+    <h2 class="section-heading">Flexible support that fits your workload.</h2>
+    <p class="section-description">Choose a starting point based on the level of support you need. We can confirm the exact scope and schedule before work begins.</p>
+    <div class="at-price-grid">
+      <article class="at-price-card">
+        <h3>Hourly Support</h3><p>For flexible or occasional tasks.</p>
+        <div class="at-price">$15 <small>/ hour</small></div>
+        <ul class="at-price-list"><li>Pay for the hours you need</li><li>Administrative and business tasks</li><li>Flexible task priorities</li><li>Progress updates</li></ul>
+        <a class="at-plan-link" href="https://cal.com/ankit-thakur-3gwplm" target="_blank" rel="noopener noreferrer">Discuss hourly support</a>
+      </article>
+      <article class="at-price-card featured">
+        <h3>Monthly Essential</h3><p>Consistent support for ongoing business tasks.</p>
+        <div class="at-price">$499 <small>/ month</small></div>
+        <ul class="at-price-list"><li>Up to 40 support hours</li><li>Admin and operations assistance</li><li>Marketing coordination</li><li>Regular progress updates</li></ul>
+        <a class="at-plan-link" href="https://cal.com/ankit-thakur-3gwplm" target="_blank" rel="noopener noreferrer">Choose monthly support</a>
+      </article>
+      <article class="at-price-card">
+        <h3>Monthly Growth</h3><p>More capacity for a busy team or growing business.</p>
+        <div class="at-price">$899 <small>/ month</small></div>
+        <ul class="at-price-list"><li>Up to 80 support hours</li><li>Broader task coverage</li><li>Ongoing workflow coordination</li><li>Priority communication</li></ul>
+        <a class="at-plan-link" href="https://cal.com/ankit-thakur-3gwplm" target="_blank" rel="noopener noreferrer">Discuss growth support</a>
+      </article>
+    </div>
+    <p class="at-pricing-note">Pricing shown is a proposed starting structure. Final scope, hours, deliverables and payment terms should be agreed before engagement.</p>
+  </div>
+</section>
 
+<section class="at-faq" id="faq">
+  <div class="at-section-wrap">
+    <div class="section-eyebrow">FREQUENTLY ASKED QUESTIONS</div>
+    <h2 class="section-heading">A few things you may want to know.</h2>
+    <p class="section-description">Clear expectations make working together easier from day one.</p>
+    <div class="at-faq-list">
+      <details><summary>What kind of businesses do you work with?</summary><p>I support business owners, founders, CEOs and teams that need help with administration, marketing coordination, operations and day-to-day tasks.</p></details>
+      <details><summary>Can I choose only the services I need?</summary><p>Yes. We can define the tasks and responsibilities around your current priorities and agree on a suitable engagement plan.</p></details>
+      <details><summary>How does the onboarding process work?</summary><p>We start with a discovery call, discuss your needs, agree on the scope and working arrangement, and then organize access, priorities and communication.</p></details>
+      <details><summary>How will we communicate?</summary><p>We can agree on the communication channels and update frequency that work best for your team, with clear task tracking and progress updates.</p></details>
+      <details><summary>Do you offer ongoing monthly support?</summary><p>Yes. Monthly support can be arranged for businesses that need consistent help with recurring tasks and workflows.</p></details>
+      <details><summary>Can the plan be customized?</summary><p>Yes. The exact workload, hours and deliverables can be discussed and confirmed before the engagement starts.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="at-final-cta">
+  <div class="at-section-wrap">
+    <div class="section-eyebrow">LET'S WORK TOGETHER</div>
+    <h2 class="section-heading">Ready to get more time back?</h2>
+    <p class="section-description">Let's talk about your workload, identify where support will make the biggest difference and build a practical way forward.</p>
+    <a class="btn" href="https://cal.com/ankit-thakur-3gwplm" target="_blank" rel="noopener noreferrer">Book Your Discovery Call →</a>
+  </div>
+</section>
+
+</main>
+
+</body>
+</html>
