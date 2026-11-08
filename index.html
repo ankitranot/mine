@@ -677,7 +677,7 @@ header {
 
 /* HOW I WORK */
 .how-i-work-section {
-  background: #fff;
+  background: #f5f3ec;
   padding: 100px 7%;
   color: #173e30;
 }
@@ -875,8 +875,8 @@ header {
 .at-price-card.featured .at-plan-link { background:#c8f23e; color:#173e30; }
 .at-pricing-note { margin-top:20px; color:#68776e; font-size:13px; }
 .at-faq { background:#fff; }
-.at-faq-list { max-width:900px; margin:45px auto 0; border-top:1px solid #dfe5dc; }
-.at-faq-list details { border-bottom:1px solid #dfe5dc; padding:22px 4px; }
+.at-faq-list { max-width:900px; margin:45px 0 0; border-top:1px solid #dfe5dc; }
+.at-faq-list details { border-bottom:1px solid #dfe5dc; padding:22px 0; }
 .at-faq-list summary { cursor:pointer; list-style:none; font-weight:700; color:#173e30; display:flex; justify-content:space-between; gap:20px; }
 .at-faq-list summary::-webkit-details-marker { display:none; }
 .at-faq-list summary::after { content:"+"; color:#668b38; font-size:22px; line-height:1; }
@@ -895,6 +895,44 @@ header {
   .at-problems,.at-services,.at-pricing,.at-faq,.at-final-cta { padding:70px 6%; }
   .at-problem-grid,.at-service-grid,.at-price-grid { grid-template-columns:1fr; }
   .at-problem-card,.at-service-card,.at-price-card { padding:25px; }
+}
+</style>
+
+
+<style>
+/* FINAL CTA BUTTON — MATCH HERO BUTTON STYLE, WITH CONTRAST ON DARK BACKGROUND */
+.at-final-cta .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  background: #fff;
+  color: #173e30;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  padding: 15px 28px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 23px;
+  font-weight: 400;
+  letter-spacing: .2px;
+  text-decoration: none;
+  min-height: unset;
+  box-shadow: none;
+  transition: all .25s ease;
+}
+.at-final-cta .btn:hover {
+  background: #c8f23e;
+  color: #173e30;
+  border-color: #c8f23e;
+  transform: translateY(-3px);
+  box-shadow: none;
+}
+@media (max-width: 600px) {
+  .at-final-cta .btn {
+    width: 100%;
+    padding: 15px 18px;
+    font-size: 20px;
+  }
 }
 </style>
 
@@ -1310,11 +1348,11 @@ header {
       organized, focus on growth and get more done every day.
     </p>
     <a class="btn" href="https://cal.com/ankit-thakur-3gwplm" target="_blank" rel="noopener noreferrer">
-      Book Your Discovery Call <span>→</span>
+      Let's Talk About Your Business <span>→</span>
     </a>
     <div class="cta-note">
-     
-      Discuss your needs · No obligation 
+      <span>●</span>
+      Book a discovery call · Discuss your needs · No obligation
     </div>
   </div>
 </section>
