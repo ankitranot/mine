@@ -180,6 +180,28 @@
 
 
 /* THREE CLIENT TESTIMONIAL CARDS */
+
+/* Keep all three review cards aligned consistently */
+.testimonials-grid-single {
+  align-items: stretch;
+}
+.testimonials-grid-single .testimonial-card-featured {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 350px;
+  box-sizing: border-box;
+}
+.testimonials-grid-single .testimonial-quote-mark {
+  flex: 0 0 auto;
+}
+.testimonials-grid-single .testimonial-quote {
+  flex: 1 0 auto;
+}
+.testimonials-grid-single .testimonial-person {
+  margin-top: auto;
+}
+
 .testimonials-grid-single {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   justify-content: center;
@@ -917,7 +939,7 @@ header {
   overflow: hidden;
   border: 1px solid rgba(23,62,48,.13);
   border-radius: 18px;
-  background: #fff;
+  background: #f5f3ec;
   box-shadow: 0 20px 55px rgba(23,62,48,.08);
 }
 .va-plan-panel {
@@ -1049,6 +1071,7 @@ header {
 }
 .va-calculator-split .va-includes {
   grid-column: 1 / -1;
+  background: transparent;
   width: calc(100% - 76px);
   margin: 0 auto;
   padding: 25px 0 20px;
@@ -1059,6 +1082,7 @@ header {
 }
 .va-calculator-split .va-pricing-note {
   grid-column: 1 / -1;
+  background: transparent;
   margin: 0;
   padding: 0 38px 28px;
   text-align: center;
@@ -1394,6 +1418,333 @@ header {
   .va-cta-btn { width: fit-content; margin: 0 auto; padding: 15px 18px; font-size: 20px; }
 }
 
+
+/* FINAL FIX: equal-height testimonial cards and no white support-card footer */
+.testimonials-grid-single {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  grid-auto-rows: 1fr !important;
+  align-items: stretch !important;
+}
+.testimonials-grid-single > .testimonial-card-featured {
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100% !important;
+  min-height: 390px !important;
+  box-sizing: border-box !important;
+}
+.testimonials-grid-single > .testimonial-card-featured > .testimonial-quote {
+  flex: 1 1 auto !important;
+  margin-bottom: 24px !important;
+}
+.testimonials-grid-single > .testimonial-card-featured > .testimonial-person {
+  flex: 0 0 auto !important;
+  margin-top: auto !important;
+}
+.va-calculator.va-calculator-split {
+  background: #f5f3ec !important;
+}
+.va-calculator.va-calculator-split > .va-includes,
+.va-calculator.va-calculator-split > .va-pricing-note {
+  background: transparent !important;
+}
+.va-calculator.va-calculator-split > .va-includes {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+@media (max-width: 900px) {
+  .testimonials-grid-single {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+@media (max-width: 600px) {
+  .testimonials-grid-single {
+    grid-template-columns: 1fr !important;
+  }
+  .testimonials-grid-single > .testimonial-card-featured {
+    min-height: 340px !important;
+  }
+}
+
+
+/* FLEXIBLE MONTHLY SUPPORT — REDESIGNED */
+.at-pricing {
+  padding: 112px 7% 120px !important;
+  background: #f5f3ec !important;
+}
+.at-pricing .section-eyebrow {
+  color: #668b38 !important;
+  letter-spacing: 2px;
+}
+.at-pricing .section-heading {
+  max-width: 760px;
+  margin-left: 0;
+  font-size: clamp(36px, 4.6vw, 58px);
+  line-height: 1.08;
+  letter-spacing: -1.5px;
+}
+.at-pricing .section-description {
+  max-width: 650px;
+  margin-left: 0;
+  margin-bottom: 48px;
+  color: #68776e;
+}
+.va-support-redesign {
+  max-width: 1120px !important;
+  display: grid !important;
+  grid-template-columns: 1.08fr .92fr !important;
+  gap: 0 !important;
+  overflow: hidden !important;
+  border: 1px solid rgba(23,62,48,.12) !important;
+  border-radius: 22px !important;
+  background: #fff !important;
+  box-shadow: 0 24px 70px rgba(23,62,48,.09) !important;
+}
+.va-support-redesign .va-plan-panel {
+  padding: clamp(30px, 5vw, 58px) !important;
+  background: #fff !important;
+}
+.va-support-topline {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #668b38;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.6px;
+  margin-bottom: 25px;
+}
+.va-support-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #edf6d8;
+  color: #668b38;
+  font-size: 17px;
+}
+.va-support-redesign .va-plan-panel h3 {
+  max-width: 450px;
+  font-size: clamp(32px, 3.8vw, 46px);
+  line-height: 1.08;
+  letter-spacing: -1px;
+  margin-bottom: 16px;
+}
+.va-support-redesign .va-plan-panel h3 em {
+  color: #6e9638;
+  font-style: normal;
+}
+.va-support-redesign .va-plan-panel > p {
+  max-width: 430px;
+  font-size: 15px;
+  line-height: 1.8;
+  margin-bottom: 0;
+}
+.va-support-redesign .va-rate-block {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin: 30px 0 34px;
+  padding: 18px 0;
+  border-top: 1px solid #e9ede4;
+  border-bottom: 1px solid #e9ede4;
+}
+.va-support-redesign .va-rate-block .va-rate {
+  color: #173e30;
+  font-size: 42px;
+  letter-spacing: -1.5px;
+}
+.va-support-redesign .va-rate-unit {
+  color: #68776e;
+  font-size: 12px;
+}
+.va-support-redesign .va-slider-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 12px;
+  margin: 0 0 12px;
+}
+.va-support-redesign .va-slider-heading label {
+  color: #173e30;
+  font-size: 14px;
+  font-weight: 700;
+}
+.va-support-redesign .va-hours-input-wrap {
+  max-width: 100%;
+  min-height: 68px;
+  padding: 10px 18px;
+  border: 1px solid #c8d9a9;
+  border-radius: 12px;
+  background: #f8faF3;
+}
+.va-support-redesign .va-hours-input-wrap input {
+  color: #173e30;
+  font-size: 32px;
+  font-weight: 700;
+}
+.va-support-redesign .va-hours-input-wrap span {
+  color: #68776e;
+  font-size: 12px;
+}
+.va-support-redesign .va-slider-scale {
+  display: flex;
+  justify-content: space-between;
+  color: #7c897f;
+  font-size: 11px;
+}
+.va-support-footnote {
+  margin-top: 30px;
+  color: #668b38;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .2px;
+}
+.va-support-redesign .va-price-panel {
+  position: relative;
+  align-items: flex-start;
+  justify-content: center;
+  padding: clamp(32px, 5vw, 58px) !important;
+  background: #173e30 !important;
+  color: #fff !important;
+}
+.va-support-redesign .va-price-panel:before {
+  content: "";
+  position: absolute;
+  width: 230px;
+  height: 230px;
+  top: -110px;
+  right: -90px;
+  border: 1px solid rgba(200,242,62,.18);
+  border-radius: 50%;
+  box-shadow: 0 0 0 28px rgba(200,242,62,.035), 0 0 0 56px rgba(200,242,62,.025);
+}
+.va-support-redesign .va-price-eyebrow {
+  position: relative;
+  color: #c8f23e;
+  font-size: 10px;
+  letter-spacing: 1.8px;
+}
+.va-support-redesign .va-total {
+  position: relative;
+  font-size: clamp(48px, 6vw, 66px) !important;
+  letter-spacing: -2px;
+  line-height: 1.05;
+  margin: 20px 0 8px !important;
+}
+.va-support-redesign .va-calculation {
+  color: rgba(255,255,255,.68) !important;
+  font-size: 13px;
+}
+.va-support-redesign .va-price-divider {
+  margin: 30px 0 22px;
+  background: rgba(255,255,255,.18);
+}
+.va-support-redesign .va-savings {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.va-support-redesign .va-savings span {
+  color: rgba(255,255,255,.72);
+  font-size: 13px;
+}
+.va-support-redesign .va-savings strong {
+  color: #c8f23e;
+  font-size: 27px;
+}
+.va-support-redesign .va-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  width: 100%;
+  min-height: 58px;
+  margin: 34px 0 0 !important;
+  padding: 15px 20px !important;
+  border: 1px solid #c8f23e !important;
+  border-radius: 9px;
+  background: #c8f23e !important;
+  color: #173e30 !important;
+  font-size: 14px !important;
+  font-weight: 800;
+  text-align: center;
+}
+.va-support-redesign .va-cta-btn:hover {
+  background: #fff !important;
+  border-color: #fff !important;
+}
+.va-price-smallprint {
+  margin-top: 15px;
+  color: rgba(255,255,255,.56);
+  font-size: 10px;
+  text-align: center;
+  width: 100%;
+}
+.va-support-redesign .va-includes {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0,1fr));
+  gap: 14px;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 26px 34px;
+  border-top: 1px solid #e9ede4;
+  background: #fbfcf8 !important;
+}
+.va-support-redesign .va-includes span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #40584a;
+  font-size: 11px;
+  line-height: 1.5;
+}
+.va-support-redesign .va-includes b {
+  color: #6e9638;
+  font-size: 15px;
+}
+.va-support-redesign .va-pricing-note {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding: 0 34px 22px;
+  background: #fbfcf8 !important;
+  color: #899188;
+  font-size: 10px;
+  line-height: 1.6;
+  text-align: left;
+}
+@media(max-width:760px) {
+  .at-pricing { padding: 82px 6% !important; }
+  .at-pricing .section-heading { font-size: 39px; }
+  .va-support-redesign { grid-template-columns: 1fr !important; }
+  .va-support-redesign .va-plan-panel,
+  .va-support-redesign .va-price-panel { padding: 32px 26px !important; }
+  .va-support-redesign .va-includes {
+    grid-template-columns: 1fr 1fr;
+    padding: 22px 24px;
+  }
+  .va-support-redesign .va-pricing-note { padding: 0 24px 20px; }
+}
+@media(max-width:440px) {
+  .va-support-redesign .va-includes { grid-template-columns: 1fr; }
+  .va-support-redesign .va-slider-scale { font-size: 10px; }
+}
+
+
+/* FINAL COLOR UPDATE: all light areas of Flexible Monthly Support are white */
+.va-support-redesign,
+.va-support-redesign .va-plan-panel,
+.va-support-redesign .va-includes,
+.va-support-redesign .va-pricing-note {
+  background: #ffffff !important;
+}
+.va-support-redesign .va-hours-input-wrap {
+  background: #ffffff !important;
+}
+
 </style>
 
 </head>
@@ -1688,51 +2039,56 @@ header {
 <section class="at-pricing" id="pricing">
   <div class="at-section-wrap">
     <div class="section-eyebrow">FLEXIBLE MONTHLY SUPPORT</div>
-    <h2 class="section-heading">Choose the support your business needs.</h2>
-    <p class="section-description">Set the number of hours you need each month. Your monthly investment updates instantly, with one simple hourly rate.</p>
+    <h2 class="section-heading">More time for the work that moves your business forward.</h2>
+    <p class="section-description">Choose your monthly support hours. Get dependable help with the day-to-day, at one clear hourly rate.</p>
 
-    <div class="va-calculator va-calculator-split">
+    <div class="va-calculator va-calculator-split va-support-redesign">
       <div class="va-plan-panel">
-        <span class="va-calculator-kicker">YOUR MONTHLY SUPPORT</span>
-        <h3>Build a plan around your workload.</h3>
-        <p>Choose the number of hours you need. Your monthly investment updates instantly.</p>
+        <div class="va-support-topline">
+          <span class="va-support-icon">✳</span>
+          <span>SUPPORT THAT SCALES WITH YOU</span>
+        </div>
+        <h3>Your workload.<br><em>Your hours.</em></h3>
+        <p>Start with the hours you need now. Adjust your support as your business priorities change.</p>
 
         <div class="va-rate-block">
           <span class="va-rate">$20</span>
-          <span class="va-rate-unit">per hour</span>
+          <span class="va-rate-unit">/ hour · simple, transparent pricing</span>
         </div>
 
         <div class="va-slider-heading">
-          <label for="vaHours">How many hours do you need?</label>
+          <label for="vaHours">Set your monthly hours</label>
           <div class="va-hours-input-wrap">
             <input type="number" id="vaHours" min="10" max="360" step="1" value="40" inputmode="numeric" aria-label="Enter monthly support hours">
             <span>hours / month</span>
           </div>
         </div>
-        <div class="va-slider-scale"><span>Minimum 10 hours</span><span>Up to 360 hours</span></div>
+        <div class="va-slider-scale"><span>10 hrs minimum</span><span>360 hrs maximum</span></div>
+        <div class="va-support-footnote">Flexible monthly support · Clear scope · Regular updates</div>
       </div>
 
       <div class="va-price-panel">
-        <span class="va-price-eyebrow">YOUR ESTIMATED MONTHLY COST</span>
+        <span class="va-price-eyebrow">YOUR MONTHLY ESTIMATE</span>
         <div class="va-total" id="vaTotal">$800</div>
         <span class="va-calculation" id="vaCalculation">40 hours × $20/hour</span>
         <div class="va-price-divider"></div>
         <div class="va-savings">
-          <span>Estimated value of your time if you do it yourself*</span>
+          <span>Illustrative value of the time you get back*</span>
           <strong id="vaSavings">$1,400/month</strong>
         </div>
         <a class="va-cta-btn" id="vaStart" href="https://cal.com/ankit-thakur-3gwplm" target="_blank" rel="noopener noreferrer">
-          Start Your Project <span>→</span>
+          Book Your Discovery Call <span>→</span>
         </a>
+        <span class="va-price-smallprint">No complicated packages. Just the support you need.</span>
       </div>
 
       <div class="va-includes">
-        <span>✓ Flexible monthly hours</span>
-        <span>✓ Admin & business support</span>
-        <span>✓ Marketing & operations assistance</span>
-        <span>✓ Clear progress updates</span>
+        <span><b>✓</b> Flexible monthly hours</span>
+        <span><b>✓</b> Admin & business support</span>
+        <span><b>✓</b> Marketing & operations assistance</span>
+        <span><b>✓</b> Clear progress updates</span>
       </div>
-      <p class="va-pricing-note">*Estimated using an illustrative value of $35/hour for your time. This is a comparison to help you consider the value of the hours you could spend handling the work yourself; it is not an additional fee. Final scope, availability and working schedule are confirmed before engagement.</p>
+      <p class="va-pricing-note">*Illustrative comparison based on $35/hour for your time. This is not an additional fee. Final scope, availability and working schedule are confirmed before engagement.</p>
     </div>
   </div>
 </section>
