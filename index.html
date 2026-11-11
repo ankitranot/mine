@@ -87,6 +87,23 @@
   margin: 0;
 }
 
+
+.client-avatars {
+  display: flex;
+  align-items: center;
+}
+.client-avatars img {
+  width: 42px;
+  height: 42px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #c8f23e;
+  box-sizing: border-box;
+  margin-left: -9px;
+  background: #173e30;
+}
+.client-avatars img:first-child { margin-left: 0; }
+
 /* TESTIMONIALS */
 .testimonials-section {
   background: #173e30;
@@ -1469,11 +1486,9 @@ header {
       <div class="client-social-proof">
 
         <div class="client-avatars">
-          <img
-            src="./ChrisVermeulen-Headshotteam.png.webp"
-            alt="The Technical Traders client representative"
-            loading="lazy"
-          >
+          <img src="./ChrisVermeulen-Headshotteam.png.webp" alt="The Technical Traders representative" loading="lazy">
+          <img src="./nick-metsis-professional.jpg" alt="Nick Metsis, Metsis Media" loading="lazy">
+          <img src="./andrew-kim-photo.png" alt="Andrew Kim, Founder of Tort Claim Strategies" loading="lazy">
         </div>
 
         <a href="#testimonials" class="client-review-link">
@@ -1623,10 +1638,6 @@ header {
       Here's what clients have to say about working together.
     </p>
 
-    <p class="testimonial-draft-note">
-      The two new testimonial quotes are suggested draft wording. Please publish them as client testimonials only after Andrew Kim and Nick Metsis have approved the wording.
-    </p>
-
     <div class="testimonials-grid testimonials-grid-single">
 
       <div class="testimonial-card testimonial-card-featured">
@@ -1644,7 +1655,6 @@ header {
       </div>
 
       <div class="testimonial-card testimonial-card-featured">
-        <span class="testimonial-draft-label">DRAFT · PENDING APPROVAL</span>
         <div class="testimonial-quote-mark" aria-hidden="true">“</div>
         <p class="testimonial-quote">
           Ankit has been a dependable support to our team. His clear communication, organized approach and willingness to take ownership make collaboration straightforward.
@@ -1659,7 +1669,6 @@ header {
       </div>
 
       <div class="testimonial-card testimonial-card-featured">
-        <span class="testimonial-draft-label">DRAFT · PENDING APPROVAL</span>
         <div class="testimonial-quote-mark" aria-hidden="true">“</div>
         <p class="testimonial-quote">
           Ankit is reliable, thoughtful and professional in his approach. He communicates clearly, follows through on assigned work and helps make day-to-day coordination easier.
